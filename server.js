@@ -10,8 +10,10 @@ app.set('port', process.env.PORT || 9000)
 const dbOptions = {
     host: 'localhost',
     port: 3306,
+    // port: 3307, //para usar con docker-compose. cambio puerto asi no pisa el mysql local
     user: 'root',
     password: '6u1d0Mysql',
+    // password: 'password', //para usar con docker-compose
     database: 'clienteservidor'
 
 }
