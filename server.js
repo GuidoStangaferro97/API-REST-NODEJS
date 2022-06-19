@@ -1,3 +1,4 @@
+
 const express = require('express')
 const mysql = require('mysql')
 const myconn = require('express-myconnection')
@@ -8,12 +9,10 @@ const app = express()
 
 app.set('port', process.env.PORT || 9000)
 const dbOptions = {
-    host: 'localhost',
-    port: 3306,
-    // port: 3307, //para usar con docker-compose. cambio puerto asi no pisa el mysql local
+    host: process.env.MYSQL_URI, 
+    port: 3306, 
     user: 'root',
-    password: '6u1d0Mysql',
-    // password: 'password', //para usar con docker-compose
+    password: 'password', 
     database: 'clienteservidor'
 
 }
