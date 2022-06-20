@@ -3,7 +3,7 @@ version: "3"
 services:
 
   mysqldb:
-    image: mysql
+    image: mysql #tag de mysql falta
     command: --default-authentication-plugin=mysql_native_password
     container_name: mysql_db
     restart: always
@@ -20,7 +20,8 @@ services:
     depends_on:
       - mysqldb
     environment:
-      MYSQL_URI: mysql_db 
+      MYSQL_URI: mysql_db  
+
   # # # docker run -dp 3307:3306 -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=clienteservidor mysql
 
   # CREATE TABLE `libros` (
